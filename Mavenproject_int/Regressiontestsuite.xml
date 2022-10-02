@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<suite name="Regression">
+	
+  <test name="Regression tests">
+  
+    <classes>
+    
+    <class name="testNG_Codexamples.BatchTestingusingxml_ExecuteMultipleClassesusingXML"/>
+    <?class name="testNG_Codexamples.Logouttest2"/?>
+      <?class name="BatchTesting.remainingtests3"/?>
+      
+    </classes>
+    
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
+

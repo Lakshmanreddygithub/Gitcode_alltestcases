@@ -1,0 +1,235 @@
+
+class
+void methods
+multiple void methods
+main method
+create object for the class and invoke multiple void methods with arguments
+declare all variables
+reuse the methods from another class
+use extends method to reuse methods from another class
+//http://softwaretestingplace.blogspot.com/2015/10/sample-web-page-to-test.html
+//demo test 
+https://demo.guru99.com/test/
+
+driver.get("https://en.wikipedia.org/wiki/List_of_countries_and_dependencies_by_population");
+
+//http://www.demo.guru99.com/V4
+mngr442844
+YrUtusA
+//to store data files in eclipse project directory use syntax as below
+(".\\Testdatafiles\\testingqa.xlsx"); 
+		WebDriverManager.chromedriver().setup();
+		    driver = new ChromeDriver();
+		    driver.manage().window().maximize();
+		    //ChromeOptions options = new ChromeOptions();
+		  //options.addArguments("disable-infobars");
+		  //options.addArguments("start-maximized");
+		  
+//http://demo.automationtesting.in	    
+ //https://seleniumautomationpractice.blogspot.com/2019/07/example-of-html-iframe-alternative.html	    
+//https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+Admin
+admin123
+//http://demo.guru99.com/test/newtours/
+mercury
+mercury
+//FileInputStream file-for test data for excel
+//excel methods XSSFWorkbook XSSFSheet XSSFCell getLastRowNum getLastCellNum getRow getCell getStringCellValue getNumericCellValue
+//txt file methods- FileReader file,BufferedReader,readLine,close
+// to specify where you want to save file
+			 FileOutputStream fout=new FileOutputStream(new File("location of file/filename.xlsx"));
+//google search code with using webelement object
+ driver.get("https://www.google.com");
+     //webelement object
+         WebElement element1 = driver.findElement(By.name("q"));
+         element1.sendKeys("test");
+         element1.sendKeys(Keys.ENTER);
+       scanner object  
+     //Scanner scan = new Scanner(System.in);
+		System.out.print("Enter an int value : ");	
+		int input = scan.nextInt();
+		then use for loop to verify the given data
+		
+	// list web element	  
+		  List<WebElement> rows=t.findElements(By.tagName("tr"));	
+	//String toolTipText = element.getAttribute("title");	  
+//String Workdir1 = System.getProperty("user.dir");	  
+//Selenium has driver.getWindowHandles() and driver.switchTo().window(“{windowHandleName}”) commands to work with multiple windows.		  
+		  
+////ArrayListobject	 
+		 ArrayList<Object[]> empdata=new ArrayList<Object[]>();		 
+		  empdata.add(new Object[]{"Empid","Name","Job"});
+	      empdata.add(new Object[]{101,"UFT","Selenium"});
+	      empdata.add(new Object[]{102,"Java","Mysql"});
+	      empdata.add(new Object[] {103,"Lakshmanreddy","QA"});
+	      
+//object repository elements declaration storage using by method
+	public static By txtusername =By.name("userName");
+	public static By txtpassword=By.name("password");
+	public static By btnlogin=By.name("submit");
+	
+//using @find by
+@FindBy(how = How.XPATH, using ="/html/body/div[3]/div/ul/li[2]/a")
+	@CacheLookup
+	WebElement lnkAddNewCustomer;
+
+	@FindBy(how = How.NAME, using = "name")
+	@CacheLookup
+	WebElement txtCustomerName;
+
+	@FindBy(how = How.NAME, using = "rad1")
+	@CacheLookup
+	WebElement rdGender;
+	
+	@FindBy(name="uid")
+	@CacheLookup
+	WebElement txtUserName;
+//method for obj
+public void setUserName(String uname)
+	{
+		txtUserName.sendKeys(uname);
+	}
+
+//timestamp code
+		String timestamp1= new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String ScreenshotName="Screenshot-"+timestamp1+".jpg";
+		String reportName="Test-Report-"+timeStamp+".html";
+	
+	
+//TakesScreenshot code
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		 File target=new File(".\\projectscreens\\"+ScreenshotName);
+		//File target = new File(System.getProperty("user.dir") + "/projectscreens/" + tname + ".png");
+		FileUtils.copyFile(source, target);
+		System.out.println("Screenshot taken");
+		
+//there are two ways that we can call methods from main method
+1.create class object and invoke methods from the main method for void methods
+2.for static methods use method name only in main method
+
+//Environmentvariables_Constantsfile
+//System.out.println("Hello");
+System - Predefined Class
+out - Object
+println - Method
+"Hello" - Message
+		
+ // //gmail search
+	driver.get("https://www.gmail.com");
+	logger.info("browser launched");
+	driver.findElement(By.xpath("//*[@id=\"identifierId\"]")).sendKeys("logger info");
+	
+////calender TimeStamp-code---------------
+		  Calendar currentDate = Calendar.getInstance();
+		  SimpleDateFormat formatter= 
+		  new SimpleDateFormat("yyyy/MMM/dd HH:mm:ss");
+		  String date1 = formatter.format(currentDate.getTime());
+		  System.out.println("Now the date is :=>  " + date1);
+		 //-------------------------------------------
+		 
+////use return to to return vakue which is stored in the variable
+		eg : return invert;
+//get attribute can get - id,class,name,value,type
+//get text getTagName
+
+	
+//select class country drop down			
+	WebElement dropdowncountry =driver.findElement(By.id("input-country"));	
+	
+	Select mydropdowncountry = new Select(dropdowncountry);		
+	mydropdowncountry.selectByIndex(20);
+	mydropdowncountry.selectByValue("30");
+	mydropdowncountry.selectByVisibleText("France");
+	
+//without methods using loop to select value from the drop down
+	
+	List <WebElement> alloptionsfromdropdown=mydropdowncountry.getOptions();
+	
+	System.out.println(alloptionsfromdropdown);
+	
+	for (WebElement options : alloptionsfromdropdown) {	
+		
+		if (options.getText().equals("India")) {
+			
+			options.click();
+			
+			break;
+			
+			}
+	}	
+	}
+}
+
+//break;//is used to exit from loop -can use in for loop and in switch case also
+case NUMERIC: System.out.print(cell.getNumericCellValue()); break;
+
+//Creating a custom function for highlighting element
+	
+	public static void highLighterMethod(WebDriver driver, WebElement element){
+		
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'background: green; border: 2px solid red;');", element);						
+	}
+	//gmail elements
+driver.get("https://www.gmail.com");
+WebElement ele = driver.findElement(By.xpath("//*[@id=\"identifierId\"]"));
+WebElement element2 = driver.findElement(By.xpath("//*[@id=\"identifierNext\"]/div/button"));
+	
+///how to take screenshot	
+  driver.get("https://www.gmail.com");
+  Thread.sleep(20);
+  File source =((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+  File target=new File(".\\projectscreenshots\\gmailtoday.jpg");
+  FileUtils.copyFile(source,target);
+  
+  
+ //method we can declare in many ways
+ public static void method name(){};
+ public void method name(){};
+ public string method name(){};
+ public Object[][] methodname()
+ 
+   
+  //Exception in thread "main" org.openqa.selenium.NoSuchSessionException: invalid session id
+  
+  //ctrl+shift+B=to insert breakpoint for debugging
+  
+  
+  
+  //equal to is(==) 
+  
+  //maximize getTitle getCurrentUrl getPageSource
+  
+ // browsers
+  // firefox browser
+		// WebDriverManager.firefoxdriver().setup();
+		// WebDriver driver=new FirefoxDriver();
+// edge browser
+		// WebDriverManager.edgedriver().setup();
+		// WebDriver driver=new EdgeDriver();
+// chrome browser
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		
+//two dimensional array	
+		
+		String loginData[][]=new String[totalrows][totalcols];	
+		
+@Test(groups = {"sanity", "regression"},priority=1)
+
+//How can we run test cases in parallel using TestNG?
+		
+		//In order to run the tests in parallel just add these two key-value pairs in the suite
+			parallel=”{methods/tests/classes}”			
+			thread-count=”{number of thread you want to run simultaneously}”.
+			<suite name="ArtOfTestingSuite" parallel="methods" thread-count="5">
+			
+			
+//@Test(groups = {"NegativeTests"}, enabled = false)
+//@Test(enabled = false)
+// @DataProvider(name = "dataProvider1")
+//@Test(dataProvider = "dataProvider1")
+//implements example
+//IReporter_example implements IReporter
+

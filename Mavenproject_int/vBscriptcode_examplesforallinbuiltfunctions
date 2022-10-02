@@ -1,0 +1,501 @@
+package interview_vbscript_qtpuft;
+
+public class vBscriptcode_examplesforallinbuiltfunctions {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		
+		//'1_decl_msgbox_inputbox---
+		//------------------------------------
+		//'declaration of variable
+
+		dim a
+
+		//'inputbox usage
+
+		a=inputbox("Enter value for a:")
+
+		'msgbox usage
+
+		msgbox(a)
+		=====================================
+		//2_option_explicit------------------
+		//-------------------------------------------------
+
+		Option Explicit
+
+		Dim a,b
+		a=10
+		b=20
+		c=a+b
+		msgbox(c)
+
+		'note: error occurs as c is not declared explicitly.
+		-----------------------------------------------------
+		//3_add_sub_div_mult_mod---------
+		//-------------------------------------------
+
+		dim a,b,c
+
+		a=10
+		b=20
+
+		c=a+b
+		msgbox(c)
+
+		c=a-b
+		msgbox(c)
+
+		c=a*b
+		msgbox(c)
+
+		c=a/b
+		msgbox(c)
+
+		a=26
+		b=5
+		c=a mod b
+		msgbox(c)
+		//-----------------------------------------
+
+		//4_exprn_condn-----------------
+		//-----------------------------------------
+
+		dim a,b,c,d
+
+		a=10
+		b=20
+
+		c=a+b
+		d=a-b
+
+		if (c>d) then
+
+		msgbox(c)
+
+		else
+
+		msgbox(d)
+
+		end if
+		//--------------------------------
+		//5_arrayas_types----------
+		//-------------------------------------
+
+		dim a(2)
+
+		a(0)=5
+		a(1)=10
+		a(2)=15
+
+		msgbox a(0)
+		msgbox a(1)
+		msgbox a(2)
+
+		dim b
+
+		b=Array(50,100,150)
+
+		msgbox b(0)
+		msgbox b(1)
+		msgbox b(2)
+		//------------------------------
+		//6_dim_redim---------
+		//----------------------------------------------
+		dim a
+
+		a=Array(5,10,15)
+
+		msgbox a(0)
+		msgbox a(1)
+		msgbox a(2)
+
+		'ReDIM a(5)
+
+		redim preserve a(5)
+
+		a(3)=20
+		a(4)=25
+
+
+		msgbox a(0)
+		msgbox a(1)
+		msgbox a(2)
+		msgbox a(3)
+		msgbox a(4)
+		//====================================
+		//7_if_then-------
+		//-----------------------------------
+		'decision making statements: if-then
+
+		dim a,b
+
+		a=10
+		b=20
+
+		if (a<b) then
+
+		msgbox("a is less than b")
+
+		end if
+		//-------------------------------------------
+		//8_if_else----------
+		//--------------------------------
+		'decision making statements: if-else
+
+		dim a,b
+
+		a=10
+		b=20
+
+		if (a>b) then
+
+		msgbox("a is greater than b")
+
+		else
+
+		msgbox("a is else than b")
+
+		end if
+		//--------------------------------
+		//9_if_elseif-----
+		//-------------------------
+		'decision making statements: if-elseif
+
+		dim a,b
+
+		a=10
+		b=20
+
+		if (a>b) then
+
+		msgbox("a is greater than b")
+
+		elseif (a=b) then
+
+		msgbox("a is equal to b")
+
+		elseif(a<b) then
+
+		msgbox("a is else than b")
+
+		end if
+		//----------------------------------
+		//10_select_case-------------
+		//-----------------------------------------
+		//'decision making statements: Select-Case
+
+		dim a
+
+		a=inputbox("enter any number between 1 to 7:")
+
+		select case a
+
+		case "1"
+		msgbox("sunday")
+
+		case "2"
+		msgbox("Monday")
+
+		case "3"
+		msgbox("Tuesday")
+
+		case "4"
+		msgbox("Wednesday")
+
+		case "5"
+		msgbox("Thursday")
+
+		case "6"
+		msgbox("Friday")
+
+		case "7"
+		msgbox("saturday")
+
+		end select
+		//-------------------------------------
+
+		//11_while_wend--------------
+		//-------------------------------------
+		'decision making statements: while-wend
+
+		dim i
+
+		i=1
+
+		while i<=3
+
+		msgbox i
+
+		i=i+1
+
+		wend
+		//--------------------------------
+		//12_do_loop while----
+		//-----------------------
+		'Iterative Statements: do-loop while
+
+		i=1
+
+		do
+
+		msgbox i
+
+		i=i+1
+
+		loop while (i<=3)
+		//-----------------------------------------
+		//13_for_next---------
+		//----------------------------------
+		'Iterative Statements: For-next
+
+		for i=1 to 3
+
+		msgbox(i)
+
+		next
+		//--------------------------------
+		//14_user defined function-----------
+		//-----------------------------------------
+		'user defined functions:
+
+		function add(x,y)
+		dim z
+		z=x+y
+
+		add=z
+
+		end function
+
+		dim a
+		a=add(10,20)
+
+		msgbox(a)
+		//=======================================
+		//15_len_of_string---------
+		//--------------------------------------
+		'len() - returns length of string:
+
+		dim a,str1
+
+		str1="sunnysoft"
+
+		a=len(str1)
+
+		msgbox("Total length is:   " & a & "-chts.")
+		//----------------------------------------
+
+		//16_strcomp_comparing string--
+		//-------------------------------------------
+		dim str1, str2, x
+
+		str1="sunny"
+		str2="soft"
+
+		x=strcomp(str1, str2)
+
+		if (x=0) then
+		msgbox("both are equal")
+
+		elseif (x=1) then
+		msgbox("1st is greater than 2nd")
+
+		else
+		msgbox("1st is lower than 2nd")
+
+		end if
+		//-------------------------------------------------
+
+		//17_cstr()_converts into string--------
+		//----------------------------------------------------
+		'cstr() - converts variant into string:
+
+		dim a
+
+		a=10,7
+
+		msgbox cstr(a)
+		//--------------------------------------
+		//18_cdbl()_converts into double---
+		//-----------------------------------------------------
+		//'cdouble()-converts variant into double:
+
+		dim a,b
+
+		a=10
+
+		b=cdbl(a)
+
+		msgbox(b)
+		//----------------------------------
+		//19_cint()_convers into integer--
+		//-------------------------------------------------
+		'cint()-converts variant into integer:
+
+		dim a
+
+		a=10.7
+
+		msgbox cint(a)
+
+		//------------------------------------------
+		//20_left()_returns # of characters from left----------
+		//-------------------------------------------------
+		//'left()-returns specified # of characters from leftside
+
+		dim a
+
+		a=left("sunnysoft",5)
+
+		msgbox a
+		//----------------------------------
+		//21_mid()_returns middle characters----------------
+		//--------------------------------------------------
+		'mid()-returns middle characters as specified
+
+		dim a
+
+		a=mid("sunnysoft",6,9)
+
+		msgbox a
+		//------------------------------------
+		//22_trim()_trims spaces on both ends
+		//-------------------------------------------------
+
+		//'trim()-removes the left & right spaces in the given string
+
+		dim a
+
+		'a="              sunnysoft       "
+
+		a=trim("              sunnysoft       ")
+
+		msgbox("company:"+  a)
+
+		//--------------------------------------------
+		//23_right()_returns # of characters from right-----
+		//-----------------------------------------------------
+		'right()-returns specified # of characters from rightside
+
+		dim a
+
+		a=right("sunnysoft",5)
+
+		msgbox a
+		//---------------------------
+		//24_ltrim()_trims spaces on left side--------
+		//---------------------------------------------
+
+
+		//'ltrim()-removes the left spaces in the given string
+
+		dim a
+
+		'a="              sunnysoft"
+
+		a=ltrim("              sunnysoft")
+
+		msgbox("company:"+a)
+		//--------------------
+		//25_rtrim()_trims spaces on right side---------
+		//------------------------------
+		'rtrim()-removes the right spaces in the given string
+
+		dim a
+
+		'a="sunnysoft        "
+
+		a=rtrim("sunnysoft        ")
+
+		msgbox("company:"+a)
+		//------------------------------------
+		//26_lcase()_converts into lower case-----------
+		//-------------------------------------
+		'lcase()-converts into lower case
+
+		dim str1
+
+		str1="SUNNYSOFT"
+
+		msgbox lcase(str1)
+		//--------------------------------
+		//27_ucase()_converts into upper case-----------
+		//----------------------------------------------------
+		//'ucase()-converts into lower case
+
+		dim str1
+
+		str1="sunnysoft"
+
+		msgbox ucase(str1)
+
+		//-----------------------------
+
+		//28_round()_rounds the decimals------------
+		//---------------------------------------------------
+		//'round()-rounds the decimals into nearest integer
+
+		msgbox round(10.43)
+
+		msgbox round(10.73)
+		//-------------------------------------
+		class arithmatic
+
+		function add_2int(a,b)
+		c=a+b
+		add_2int=c
+		end function
+
+		function sub_2int(a,b)
+		c=a-b
+		sub_2int=c
+		end function
+
+		function division_2int(a,b)
+		c=a/b
+		division_2int=c
+		end function
+
+		function multi_2int(a,b)
+		c=a*b
+		multi_2int=c
+		end function
+
+		end class
+
+
+		set obj=new arithmatic
+
+		dim x,y,z
+		x=100
+		y=50
+
+		str=inputbox("what is the operation u want to perform: add, sub, div, mult")
+
+		if str="add" then
+
+		z=obj.add_2int(x,y)
+		msgbox(z)
+
+		elseif str="sub" then
+		z=obj.sub_2int(x,Y)
+		msgbox(z)
+
+		elseif str="div" then
+		z=obj.division_2int(x,y)
+		msgbox(z)
+
+		else
+		z=obj.multi_2int(x,y)
+		msgbox(z)
+
+		end if
+		//------------------------------------------------------
+
+
+
+
+	}
+
+}
